@@ -76,14 +76,14 @@
         </section>
 
         <!-- MODAL -->
-
-            <dialog class="modal-criar-economia">
-                <i class="fa-solid fa-circle-xmark"></i>
+        <div class="overlay hidden">
+            <div class="modal-criar-economia hidden">
+                <button id="btnFecharModal"><i class="fa-solid fa-circle-xmark"></i></button>
                 <form>
                     <label for="input-nome">Nome da economia</label>
                     <input type="text" name="input-nome" id="input-nome" placeholder="Digite o nome da sua economia">
                     <label for="input-valor">Valor da economia</label>
-                    <input type="text" name="input-valor" id="input-valor">
+                    <input type="text" name="input-valor" id="input-valor" placeholder="Digite o valor da sua economia">
                     <label for="select-periodo">Período da economia</label>
                     <select name="select-periodo" id="select-periodo">
                         <option value="diaria">Diária</option>
@@ -92,7 +92,8 @@
                     </select>
                     <button>Criar economia</button>
                 </form>
-            </dialog>
+            </div>
+        </div>
 
     </main>
 

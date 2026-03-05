@@ -22,10 +22,35 @@ cardsEconomia.forEach((card) => {
 // ABRIR MODAL CRIAR ECONOMIA
 
 const cardCriarEconomia = document.querySelector('div.card-criar-economia');
-const modalCriarEconomia = document.querySelector('dialog.modal-criar-economia');
+const modalOverlay = document.querySelector('div.overlay');
+const modalCriarEconomia = document.querySelector('div.modal-criar-economia');
 
-cardCriarEconomia.addEventListener('click', (e) => {
-    e.preventDefault();
+cardCriarEconomia.addEventListener("click", () => {
+    modalCriarEconomia.classList.remove('hidden');
+    modalOverlay.classList.remove('hidden');
+});
 
-    modalCriarEconomia.showModal();
-})
+// FECHAR MODAL CRIAR ECONOMIA
+
+const btnFecharEconomia = document.querySelector('button#btnFecharModal');
+
+btnFecharEconomia.addEventListener('click', () => {
+    modalCriarEconomia.classList.add('hidden');
+    modalOverlay.classList.add('hidden');
+
+    resetarInputs();
+});
+
+resetarInputs();
+
+// FUNCAO RESETAR INPUTS MODAL
+
+function resetarInputs() {
+    const inputNome = document.querySelector('input#input-nome');
+    const inputValor = document.querySelector('input#input-valor');
+    const selectPeriodo = document.querySelector('select#select-periodo');
+
+    inputNome.value = '';
+    inputValor.value = '';
+    selectPeriodo.value = 'diaria';
+}
