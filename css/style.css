@@ -1,0 +1,179 @@
+/* VARIAVEIS */
+:root {
+    --bg: #0f172a;
+    --bg-secondary: #1e293b;
+    --card: #111827;
+
+    --text: #f1f5f9;
+    --text-secondary: #94a3b8;
+
+    --primary: #22c55e;
+    --primary-hover: #16a34a;
+
+    --border: #334155;
+}
+
+.light-theme {
+
+    --bg: #f8fafc;
+    --bg-secondary: #ffffff;
+    --card: #ffffff;
+
+    --text: #0f172a;
+    --text-secondary: #64748b;
+
+    --primary: #16a34a;
+    --primary-hover: #15803d;
+
+    --border: #e2e8f0;
+
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+}
+
+header button#toggleTheme {
+    width: 50px;
+    margin: 5px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+    text-align: center;
+
+    transition: background-color 0.5s ease;
+}
+
+header button#toggleTheme i {
+    color: var(--text);
+    transition: color 0.5s ease;
+}
+
+header button#toggleTheme:hover {
+    background-color: var(--text);
+}
+
+header button#toggleTheme:hover i {
+    color: var(--bg);
+}
+
+/* MAIN */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px 0px;
+    text-align: center;
+    gap: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+button {
+    background-color: var(--bg);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    color: var(--text);
+}
+
+/* SECTION HERO */
+
+section.hero h1 {
+    font-size: 2.5em;
+}
+
+/* SECTION ECONOMIAS */
+
+section.economias div.lista-economias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 1200px;
+}
+
+section.economias div.lista-economias div.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 250px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 15px 0;
+    cursor: pointer;
+
+    transition: border 0.5s ease;
+}
+
+section.economias div.lista-economias div.card:hover {
+    border: 1px solid var(--primary);
+}
+
+div.card h3 {
+    text-transform: capitalize;
+}
+
+div.card i {
+    color: var(--primary);
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+section.economias div.lista-economias div.card-criar-economia {
+    background-color: transparent;
+    order: 1;
+}
+
+section.economias div.lista-economias div.card-economia.active {
+    background-color: var(--primary-hover);
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+div.card-economia.active i {
+    color: white;
+}
+
+/* MODAL */
+

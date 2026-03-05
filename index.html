@@ -1,14 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Juros Compostos</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
 
+<body>
+
+    <header>
+        <button id="toggleTheme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Descubra quanto você poderia<br>investir sem perceber</h1>
+            <p>Pequenas economias do dia a dia podem virar grandes investimentos.</p>
+            <button>Simular minhas economias</button>
+        </section>
+
+        <section class="economias">
+            <h2>Onde você poderia economizar?</h2>
+
+            <div class="lista-economias">
+                <div class="card card-economia">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h3>Café fora de casa</h3>
+                    <p>Economize R$110/mês</p>
+                </div>
+
+                <div class="card card-economia">
+                    <i class="fa-solid fa-burger"></i>
+                    <h3>Delivery/pedir comida</h3>
+                    <p>Economize R$160/mês</p>
+                </div>
+
+                <div class="card card-economia">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h3>Compras por impulso</h3>
+                    <p>Economize R$100/mês</p>
+                </div>
+
+                <div class="card card-economia">
+                    <i class="fa-solid fa-car"></i>
+                    <h3>Transporte por app</h3>
+                    <p>Economize R$180/mês</p>
+                </div>
+
+                <div class="card card-economia">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <h3>Streaming/Assinaturas</h3>
+                    <p>Economize R$60/mês</p>
+                </div>
+
+                <div class="card card-criar-economia">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h3>Personalizado</h3>
+                    <p>Crie sua própria economia</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="resultado">
+            <h2>Seu potencial de investimento</h2>
+
+            <!-- resultado -->
+
+        </section>
+
+        <!-- MODAL -->
+
+            <dialog class="modal-criar-economia">
+                <h2>Criar Economia Personalizada</h2>
+                <form>
+                    <input type="text" name="input-nome" id="input-nome">
+                    <input type="text" name="input-valor" id="input-valor">
+                    <select name="select-periodo" id="select-periodo">
+                        <option value="di"></option>
+                    </select>
+                </form>
+            </dialog>
+
+    </main>
+
+    <script src="https://kit.fontawesome.com/0d21ea7bef.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
